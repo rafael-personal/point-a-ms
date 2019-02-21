@@ -1,0 +1,11 @@
+---
+micronaut:
+    application:
+        name: point-a-ms
+
+---
+consul:
+  client:
+    registration:
+      enabled: false
+    #defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
