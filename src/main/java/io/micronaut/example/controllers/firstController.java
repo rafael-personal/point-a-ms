@@ -1,5 +1,6 @@
 package io.micronaut.example.controllers;
 
+import io.micronaut.example.entities.Response;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 
@@ -7,8 +8,10 @@ import io.micronaut.http.annotation.Get;
 public class firstController {
 
     @Get("/{name}")
-    public String Hello(String name){
-        return name + " Welcome to First Point";
+    public Response Hello(String name) {
+        Response response = new Response();
+        response.setMessage(name + " Welcome to First Point");
+        return response;
     }
 
 }
